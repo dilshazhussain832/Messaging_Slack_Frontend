@@ -9,7 +9,7 @@ export const createWorkspaceRequest = async ({ name, description, token}) => {
             }
         });
         console.log("Response in create workspace request", response);
-        return response?.data;
+        return response?.data?.data;
         
     } catch (error) {
         console.log("Response in create workspace request", response);
@@ -25,7 +25,7 @@ export const fetchWorkspacesRequest = async ({ token}) => {
             }
         });
         console.log("Response in fetch workspaces request", response);
-        return response?.data;
+        return response?.data?.data;
     } catch (error) {
         console.log("Error in fetch workspaces request", error);
         throw error.response.data;
